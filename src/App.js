@@ -1,26 +1,22 @@
+/* eslint-disable import/first */
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Button } from 'antd';
+import 'antd/dist/antd.css'; 
+import { Row, Col } from 'antd';
+import { Layout , Icon} from 'antd';
+import "./App.css";
+const { Header, Footer, Sider, Content } = Layout;
+import Problem from "./components/Problem";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends React.Component{
+  render(){
+     return (
+      <div>
+        <Layout className="container">
+          <Problem />
+        </Layout>
+      </div>
+    );
+  }
+ 
 }
-
-export default App;
