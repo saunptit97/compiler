@@ -1,12 +1,10 @@
+/* eslint-disable import/first */
 import React from 'react';
-import { Button } from 'antd';
-import 'antd/dist/antd.css'; 
-import { Row, Col } from 'antd';
-import { Layout , Icon} from 'antd';
+import { Col, Icon } from 'antd';
 import RelatedTopic from "./RelatedTopic";
 import SimilarQuestion from "./SimilarQuestion";
 import Company from "./Company";
-const { Header, Footer, Sider, Content } = Layout;
+
 export default class Description extends React.Component{
   render() {
     return (

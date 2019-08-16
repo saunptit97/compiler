@@ -6,10 +6,11 @@ const { SubMenu } = Menu;
 
 import Description from "./problem/Description";
 import Compiler from "./problem/Compiler";
+
 export default class Problem extends React.Component{
   render() {
     return (
-        <Row >
+        <Row>
             <Description />
             <Compiler/>
         </Row>
