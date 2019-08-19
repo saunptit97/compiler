@@ -1,6 +1,6 @@
 /* eslint-disable import/first */
 import React from 'react';
-import { Col, Icon } from 'antd';
+import { Col, Icon , Button } from 'antd';
 import RelatedTopic from "./RelatedTopic";
 import SimilarQuestion from "./SimilarQuestion";
 import Company from "./Company";
@@ -8,8 +8,9 @@ import Company from "./Company";
 export default class Description extends React.Component{
   render() {
     return (
-      <Col span={12} className="description content">
-        <div className="description-content">
+      <Col span={10} >
+        <div className="description content">
+           <div className="description-content">
           <div className="question-title css-v3d350">771. Two Sum</div>
           <div className="css-10o4wqw">
             <span diff="easy" className="css-14oi08n easy">Easy</span>
@@ -41,6 +42,11 @@ export default class Description extends React.Component{
             <RelatedTopic/>
             <SimilarQuestion/>
         </div>
+        </div>
+       
+        <div className="footer-compiler" style={{padding: "0px 20px"}}>
+          <Button onClick={this.handleClick}><Icon type="unordered-list" style={{marginRight: "5px"}} /> Problems</Button>
+       </div> 
       </Col>
     );
   }

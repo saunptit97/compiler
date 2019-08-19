@@ -9,10 +9,11 @@ import Compiler from "./problem/Compiler";
 
 export default class Problem extends React.Component{
   render() {
+  	var {language_id} = this.props;
     return (
         <Row>
             <Description />
-            <Compiler/>
+            <Compiler language_id ={language_id} />
         </Row>
     );
   }

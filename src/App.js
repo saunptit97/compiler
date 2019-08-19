@@ -14,13 +14,19 @@ export default class App extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      languages :[]
+      languages :[],
+      language_id : 27,
     }
+    this.handleChange = this.handleChange.bind(this);
+
+  }
+  handleChange(value){
+    this.setState({
+      language_id: value
+    })
   }
   componentWillMount(){ 
-    console.log(window.innerHeight);
    callAPI("languages","GET", null).then(res =>{
-    console.log(res.data);
      this.setState({
         languages : res.data
      })
@@ -39,18 +45,18 @@ export default class App extends React.Component{
       <div>
         <Layout className="container">
           <Row>
-            <Col span={12}>
+            <Col span={10}>
               <div className="header-description" style={{background: "#fafafa", padding: "4px 0px", height: "40px"}}> </div>
             </Col>
-            <Col span={12}>
+            <Col span={14}>
              <div className="language" style={{background: "#fafafa", padding: "4px 0px"}}>
-                <Select defaultValue="Java" style={{ width: 120 }}>
-                   {languages}
-                  </Select>
+                <Select defaultValue="27" style={{ width: 120 }} onChange={this.handleChange}>
+                 {languages}
+                </Select>
               </div>
             </Col>
           </Row>
-          <Problem /> 
+          <Problem language_id={this.state.language_id}/> 
         </Layout>
       </div>
     );

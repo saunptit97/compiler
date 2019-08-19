@@ -1,8 +1,9 @@
+
 .CodeMirror {
   min-height: 400px !important;
 }
 .footer-compiler{
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .compiler-editor {
   border: 1px solid #eeeeee;
@@ -12,7 +13,7 @@
 }
 .CodeMirror-linenumber {
     width: 32px;
-    padding: 0 3px 0 5px;
+    padding: 0 20px 0 5px !important;
     min-width: 20px;
     text-align: right;
     color: #999 !important;
@@ -80,7 +81,14 @@
 }
 .description.content{
   padding: 0px 20px;
+  height: 602px;
+  overflow: auto;
+  border-bottom: solid 1px #eeeeee;
 }
+.description.content::-webkit-scrollbar {
+    width: 6px;
+    background-color: #F5F5F5;
+} 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
